@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff55000000160000007f0600000c040000</PLACEMENT>
+  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffff55000000160000007f0600000c040000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
@@ -76,6 +76,9 @@
      <ITEM name="ShowToolTips">Yes</ITEM>
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
+   </POPUP>
+   <POPUP w="1384" x="446" flags="00000000" y="80" h="877" pid="0" iid="42">
+    <PROPERTIES/>
    </POPUP>
   </PWI>
  </MODULE>
