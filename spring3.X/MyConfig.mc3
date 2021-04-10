@@ -1559,7 +1559,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA3"/>
-         <value>channel_AN3</value>
+         <value/>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA4"/>
@@ -1686,12 +1686,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Interrupt Module" name="IVT_NAME"/>
-         <value>IVT1</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG1" settingAlias="CP" alias="OFF"/>
          <value>128</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Interrupt Module" name="IVT_NAME"/>
+         <value>IVT1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISE" settingAlias="TRISE3"/>
@@ -2211,7 +2211,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="enableInterrupt"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="WPUA" settingAlias="WPUA1"/>
@@ -5495,7 +5495,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="AN3"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="AN2"/>
@@ -5975,7 +5975,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADC" registerAlias="ADI" settingAlias="enable"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCBF" settingAlias="IOCBF1"/>
@@ -6479,7 +6479,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RA0"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RA1"/>
@@ -6584,10 +6584,6 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
-         <file>mcc_generated_files\interrupt_manager.h</file>
-         <hash>b5fb45ad6d0e9ddb9752126b936cc6392c27a3d490af5053f9cfe54288ce6ebc</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\mcc.h</file>
          <hash>845b3495e04cb07a961270f60a40bce5c54f0f1ef9b08dfbc3bf6aefee300f7e</hash>
       </entry>
@@ -6596,12 +6592,16 @@
          <hash>5c4dc00c7d95068a29a0c315e7055f8d5c1af5c56bfc223bea8a6f40336b4681</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\interrupt_manager.h</file>
+         <hash>b5fb45ad6d0e9ddb9752126b936cc6392c27a3d490af5053f9cfe54288ce6ebc</hash>
+      </entry>
+      <entry>
          <file>main.c</file>
          <hash>5bbfb1a51d4d8c0c8bba85f01b2d3661ccc281cb1dcb67788585b09d26b26c47</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\adc.c</file>
-         <hash>faf7284ff2349fb91c1dcbceedd9fd1ca44c29ca52f2bbbbddc9b28818aa18e9</hash>
+         <hash>4bbdb4d7c89a87beca85e054f8fa0af91a3c401df85159e0527475fdf79a293d</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\device_config.c</file>
@@ -6609,19 +6609,19 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.h</file>
-         <hash>d9f0643bcb6a8f295275fc068a0a3595b8dd7be51cdd287d57f9b6966ceb654c</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\interrupt_manager.c</file>
-         <hash>27399c72dadf498d5055aca2e295026d3be525a2d2326c248a4e4136d79fda3e</hash>
+         <hash>690507c7c4d37a63a89f975a784b0f7780f7c70089a9bc2fdfe187b3376279a6</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.c</file>
          <hash>e99650dab0eed0cfa3c0498cc0066b9c6ba7091242999a17422bd947308d3594</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\interrupt_manager.c</file>
+         <hash>517a431c66b0064b5196e989e5a3377de736b300af84075961bc4bae7da9b28a</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\adc.h</file>
-         <hash>6998db22e6a2c8a706dba7fb90d7d0180a238fadfd832686c8f33693873f0281</hash>
+         <hash>5fb220e1884b36f22956f77920207cd1afd9a4a7a802229332f0fe8aa28b2d8b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>

@@ -60,7 +60,9 @@ void main(void)
     // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
     
-    adc_result_t resultado;
+    adc_result_t resultado1;
+    adc_result_t resultado2;
+    adc_result_t resultado3;
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
@@ -71,14 +73,30 @@ void main(void)
     {
         ADC_Initialize();
         
-        resultado = ADC_GetConversion(channel_AN0);
+        resultado1 = ADC_GetConversion(channel_AN0);
         
-        if (resultado > 0xCC) {
+        if (resultado1 > 0xCC) {
             IO_RB0_SetHigh();
         } 
-        else if (resultado <= 0xCC){
+        else if (resultado1 <= 0xCC){
             IO_RB0_SetLow();
         }
+        resultado2 = ADC_GetConversion(channel_AN1);
+        
+        if (resultado2 > 0) {
+            IO_RB1_SetHigh();
+        } 
+        else if (resultado2 <= 0){
+            IO_RB1_SetLow();
+        }
+        resultado3 = ADC_GetConversion(channel_AN2);
+        if (resultado3 > 0) {
+            IO_RB2_SetHigh();
+        } 
+        else if (resultado3 <= 0){
+            IO_RB2_SetLow();
+        }
+        
         
         // Add your application code
     }

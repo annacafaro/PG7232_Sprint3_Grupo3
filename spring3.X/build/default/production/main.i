@@ -9555,9 +9555,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 218 "./mcc_generated_files/pin_manager.h"
+# 198 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 230 "./mcc_generated_files/pin_manager.h"
+# 210 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -9705,34 +9705,25 @@ typedef enum
     channel_AN0 = 0x0,
     channel_AN1 = 0x1,
     channel_AN2 = 0x2,
-    channel_AN3 = 0x3,
     channel_DAC2_Output = 0x1C,
     channel_Temp = 0x1D,
     channel_DAC1_Output = 0x1E,
     channel_FVRBuffer1 = 0x1F
 } adc_channel_t;
-# 140 "./mcc_generated_files/adc.h"
+# 139 "./mcc_generated_files/adc.h"
 void ADC_Initialize(void);
-# 170 "./mcc_generated_files/adc.h"
+# 169 "./mcc_generated_files/adc.h"
 void ADC_SelectChannel(adc_channel_t channel);
-# 197 "./mcc_generated_files/adc.h"
+# 196 "./mcc_generated_files/adc.h"
 void ADC_StartConversion(void);
-# 229 "./mcc_generated_files/adc.h"
+# 228 "./mcc_generated_files/adc.h"
 _Bool ADC_IsConversionDone(void);
-# 262 "./mcc_generated_files/adc.h"
+# 261 "./mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversionResult(void);
-# 292 "./mcc_generated_files/adc.h"
+# 291 "./mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 320 "./mcc_generated_files/adc.h"
+# 319 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 336 "./mcc_generated_files/adc.h"
-void ADC_ISR(void);
-# 354 "./mcc_generated_files/adc.h"
- void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
-# 372 "./mcc_generated_files/adc.h"
-extern void (*ADC_InterruptHandler)(void);
-# 390 "./mcc_generated_files/adc.h"
-void ADC_DefaultInterruptHandler(void);
 # 56 "./mcc_generated_files/mcc.h" 2
 # 71 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
@@ -9760,7 +9751,9 @@ void main(void)
 
     (INTCONbits.PEIE = 1);
 
-    adc_result_t resultado;
+    adc_result_t resultado1;
+    adc_result_t resultado2;
+    adc_result_t resultado3;
 
 
 
@@ -9771,14 +9764,30 @@ void main(void)
     {
         ADC_Initialize();
 
-        resultado = ADC_GetConversion(channel_AN0);
+        resultado1 = ADC_GetConversion(channel_AN0);
 
-        if (resultado > 0xCC) {
+        if (resultado1 > 0xCC) {
             do { LATBbits.LATB0 = 1; } while(0);
         }
-        else if (resultado <= 0xCC){
+        else if (resultado1 <= 0xCC){
             do { LATBbits.LATB0 = 0; } while(0);
         }
+        resultado2 = ADC_GetConversion(channel_AN1);
+
+        if (resultado2 > 0) {
+            do { LATBbits.LATB1 = 1; } while(0);
+        }
+        else if (resultado2 <= 0){
+            do { LATBbits.LATB1 = 0; } while(0);
+        }
+        resultado3 = ADC_GetConversion(channel_AN2);
+        if (resultado3 > 0) {
+            do { LATBbits.LATB2 = 1; } while(0);
+        }
+        else if (resultado3 <= 0){
+            do { LATBbits.LATB2 = 0; } while(0);
+        }
+
 
 
     }

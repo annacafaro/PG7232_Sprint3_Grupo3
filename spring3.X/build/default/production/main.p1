@@ -18,15 +18,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "374
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"140 ./mcc_generated_files/adc.h
-[; ;./mcc_generated_files/adc.h: 140: void ADC_Initialize(void);
+"139 ./mcc_generated_files/adc.h
+[; ;./mcc_generated_files/adc.h: 139: void ADC_Initialize(void);
 [v _ADC_Initialize `(v ~T0 @X0 0 ef ]
-"74 main.c
-[; ;main.c: 74:         resultado = ADC_GetConversion(channel_AN0);
-[c E5593 0 1 2 3 28 29 30 31 .. ]
-[n E5593 . channel_AN0 channel_AN1 channel_AN2 channel_AN3 channel_DAC2_Output channel_Temp channel_DAC1_Output channel_FVRBuffer1  ]
-"292 ./mcc_generated_files/adc.h
-[; ;./mcc_generated_files/adc.h: 292: adc_result_t ADC_GetConversion(adc_channel_t channel);
+"76 main.c
+[; ;main.c: 76:         resultado1 = ADC_GetConversion(channel_AN0);
+[c E5593 0 1 2 28 29 30 31 .. ]
+[n E5593 . channel_AN0 channel_AN1 channel_AN2 channel_DAC2_Output channel_Temp channel_DAC1_Output channel_FVRBuffer1  ]
+"291 ./mcc_generated_files/adc.h
+[; ;./mcc_generated_files/adc.h: 291: adc_result_t ADC_GetConversion(adc_channel_t channel);
 [v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E5593 ]
 "2358 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h: 2358:     struct {
@@ -988,59 +988,135 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 61:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "63
-[; ;main.c: 63:     adc_result_t resultado;
-[v _resultado `us ~T0 @X0 1 a ]
-"70
-[; ;main.c: 70:     while (1)
-[e :U 785 ]
-"71
-[; ;main.c: 71:     {
-{
+[; ;main.c: 63:     adc_result_t resultado1;
+[v _resultado1 `us ~T0 @X0 1 a ]
+"64
+[; ;main.c: 64:     adc_result_t resultado2;
+[v _resultado2 `us ~T0 @X0 1 a ]
+"65
+[; ;main.c: 65:     adc_result_t resultado3;
+[v _resultado3 `us ~T0 @X0 1 a ]
 "72
-[; ;main.c: 72:         ADC_Initialize();
-[e ( _ADC_Initialize ..  ]
-"74
-[; ;main.c: 74:         resultado = ADC_GetConversion(channel_AN0);
-[e = _resultado ( _ADC_GetConversion (1 . `E5593 0 ]
-"76
-[; ;main.c: 76:         if (resultado > 0xCC) {
-[e $ ! > -> _resultado `ui -> -> 204 `i `ui 787  ]
+[; ;main.c: 72:     while (1)
+[e :U 785 ]
+"73
+[; ;main.c: 73:     {
 {
-"77
-[; ;main.c: 77:             do { LATBbits.LATB0 = 1; } while(0);
+"74
+[; ;main.c: 74:         ADC_Initialize();
+[e ( _ADC_Initialize ..  ]
+"76
+[; ;main.c: 76:         resultado1 = ADC_GetConversion(channel_AN0);
+[e = _resultado1 ( _ADC_GetConversion (1 . `E5593 0 ]
+"78
+[; ;main.c: 78:         if (resultado1 > 0xCC) {
+[e $ ! > -> _resultado1 `ui -> -> 204 `i `ui 787  ]
+{
+"79
+[; ;main.c: 79:             do { LATBbits.LATB0 = 1; } while(0);
 [e :U 790 ]
 {
 [e = . . _LATBbits 0 0 -> -> 1 `i `uc ]
 }
 [e :U 789 ]
-"78
-[; ;main.c: 78:         }
+"80
+[; ;main.c: 80:         }
 }
 [e $U 791  ]
-"79
-[; ;main.c: 79:         else if (resultado <= 0xCC){
+"81
+[; ;main.c: 81:         else if (resultado1 <= 0xCC){
 [e :U 787 ]
-[e $ ! <= -> _resultado `ui -> -> 204 `i `ui 792  ]
+[e $ ! <= -> _resultado1 `ui -> -> 204 `i `ui 792  ]
 {
-"80
-[; ;main.c: 80:             do { LATBbits.LATB0 = 0; } while(0);
+"82
+[; ;main.c: 82:             do { LATBbits.LATB0 = 0; } while(0);
 [e :U 795 ]
 {
 [e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
 }
 [e :U 794 ]
-"81
-[; ;main.c: 81:         }
+"83
+[; ;main.c: 83:         }
 }
 [e :U 792 ]
 [e :U 791 ]
 "84
-[; ;main.c: 84:     }
+[; ;main.c: 84:         resultado2 = ADC_GetConversion(channel_AN1);
+[e = _resultado2 ( _ADC_GetConversion (1 . `E5593 1 ]
+"86
+[; ;main.c: 86:         if (resultado2 > 0) {
+[e $ ! > -> _resultado2 `ui -> -> 0 `i `ui 796  ]
+{
+"87
+[; ;main.c: 87:             do { LATBbits.LATB1 = 1; } while(0);
+[e :U 799 ]
+{
+[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+}
+[e :U 798 ]
+"88
+[; ;main.c: 88:         }
+}
+[e $U 800  ]
+"89
+[; ;main.c: 89:         else if (resultado2 <= 0){
+[e :U 796 ]
+[e $ ! <= -> _resultado2 `ui -> -> 0 `i `ui 801  ]
+{
+"90
+[; ;main.c: 90:             do { LATBbits.LATB1 = 0; } while(0);
+[e :U 804 ]
+{
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+}
+[e :U 803 ]
+"91
+[; ;main.c: 91:         }
+}
+[e :U 801 ]
+[e :U 800 ]
+"92
+[; ;main.c: 92:         resultado3 = ADC_GetConversion(channel_AN2);
+[e = _resultado3 ( _ADC_GetConversion (1 . `E5593 2 ]
+"93
+[; ;main.c: 93:         if (resultado3 > 0) {
+[e $ ! > -> _resultado3 `ui -> -> 0 `i `ui 805  ]
+{
+"94
+[; ;main.c: 94:             do { LATBbits.LATB2 = 1; } while(0);
+[e :U 808 ]
+{
+[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
+}
+[e :U 807 ]
+"95
+[; ;main.c: 95:         }
+}
+[e $U 809  ]
+"96
+[; ;main.c: 96:         else if (resultado3 <= 0){
+[e :U 805 ]
+[e $ ! <= -> _resultado3 `ui -> -> 0 `i `ui 810  ]
+{
+"97
+[; ;main.c: 97:             do { LATBbits.LATB2 = 0; } while(0);
+[e :U 813 ]
+{
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 812 ]
+"98
+[; ;main.c: 98:         }
+}
+[e :U 810 ]
+[e :U 809 ]
+"102
+[; ;main.c: 102:     }
 }
 [e :U 784 ]
 [e $U 785  ]
 [e :U 786 ]
-"85
-[; ;main.c: 85: }
+"103
+[; ;main.c: 103: }
 [e :UE 783 ]
 }

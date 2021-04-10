@@ -125,26 +125,6 @@
 #define channel_AN2_SetAnalogMode()      do { ANSELAbits.ANSA2 = 1; } while(0)
 #define channel_AN2_SetDigitalMode()     do { ANSELAbits.ANSA2 = 0; } while(0)
 
-// get/set channel_AN3 aliases
-#define channel_AN3_TRIS                 TRISAbits.TRISA3
-#define channel_AN3_LAT                  LATAbits.LATA3
-#define channel_AN3_PORT                 PORTAbits.RA3
-#define channel_AN3_WPU                  WPUAbits.WPUA3
-#define channel_AN3_OD                   ODCONAbits.ODA3
-#define channel_AN3_ANS                  ANSELAbits.ANSA3
-#define channel_AN3_SetHigh()            do { LATAbits.LATA3 = 1; } while(0)
-#define channel_AN3_SetLow()             do { LATAbits.LATA3 = 0; } while(0)
-#define channel_AN3_Toggle()             do { LATAbits.LATA3 = ~LATAbits.LATA3; } while(0)
-#define channel_AN3_GetValue()           PORTAbits.RA3
-#define channel_AN3_SetDigitalInput()    do { TRISAbits.TRISA3 = 1; } while(0)
-#define channel_AN3_SetDigitalOutput()   do { TRISAbits.TRISA3 = 0; } while(0)
-#define channel_AN3_SetPullup()          do { WPUAbits.WPUA3 = 1; } while(0)
-#define channel_AN3_ResetPullup()        do { WPUAbits.WPUA3 = 0; } while(0)
-#define channel_AN3_SetPushPull()        do { ODCONAbits.ODA3 = 0; } while(0)
-#define channel_AN3_SetOpenDrain()       do { ODCONAbits.ODA3 = 1; } while(0)
-#define channel_AN3_SetAnalogMode()      do { ANSELAbits.ANSA3 = 1; } while(0)
-#define channel_AN3_SetDigitalMode()     do { ANSELAbits.ANSA3 = 0; } while(0)
-
 // get/set IO_RB0 aliases
 #define IO_RB0_TRIS                 TRISBbits.TRISB0
 #define IO_RB0_LAT                  LATBbits.LATB0

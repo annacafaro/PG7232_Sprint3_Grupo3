@@ -9657,34 +9657,25 @@ typedef enum
     channel_AN0 = 0x0,
     channel_AN1 = 0x1,
     channel_AN2 = 0x2,
-    channel_AN3 = 0x3,
     channel_DAC2_Output = 0x1C,
     channel_Temp = 0x1D,
     channel_DAC1_Output = 0x1E,
     channel_FVRBuffer1 = 0x1F
 } adc_channel_t;
-# 140 "mcc_generated_files/adc.h"
+# 139 "mcc_generated_files/adc.h"
 void ADC_Initialize(void);
-# 170 "mcc_generated_files/adc.h"
+# 169 "mcc_generated_files/adc.h"
 void ADC_SelectChannel(adc_channel_t channel);
-# 197 "mcc_generated_files/adc.h"
+# 196 "mcc_generated_files/adc.h"
 void ADC_StartConversion(void);
-# 229 "mcc_generated_files/adc.h"
+# 228 "mcc_generated_files/adc.h"
 _Bool ADC_IsConversionDone(void);
-# 262 "mcc_generated_files/adc.h"
+# 261 "mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversionResult(void);
-# 292 "mcc_generated_files/adc.h"
+# 291 "mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 320 "mcc_generated_files/adc.h"
+# 319 "mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 336 "mcc_generated_files/adc.h"
-void ADC_ISR(void);
-# 354 "mcc_generated_files/adc.h"
- void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
-# 372 "mcc_generated_files/adc.h"
-extern void (*ADC_InterruptHandler)(void);
-# 390 "mcc_generated_files/adc.h"
-void ADC_DefaultInterruptHandler(void);
 # 52 "mcc_generated_files/adc.c" 2
 
 # 1 "mcc_generated_files/device_config.h" 1
@@ -9722,11 +9713,6 @@ void ADC_Initialize(void)
 
     ADCON0 = 0x01;
 
-
-    PIE1bits.ADIE = 1;
-
-
-    ADC_SetInterruptHandler(ADC_DefaultInterruptHandler);
 }
 
 void ADC_SelectChannel(adc_channel_t channel)
@@ -9782,24 +9768,4 @@ adc_result_t ADC_GetConversion(adc_channel_t channel)
 void ADC_TemperatureAcquisitionDelay(void)
 {
     _delay((unsigned long)((200)*(500000/4000000.0)));
-}
-
-void ADC_ISR(void)
-{
-
-    PIR1bits.ADIF = 0;
-
- if(ADC_InterruptHandler)
-    {
-        ADC_InterruptHandler();
-    }
-}
-
-void ADC_SetInterruptHandler(void (* InterruptHandler)(void)){
-    ADC_InterruptHandler = InterruptHandler;
-}
-
-void ADC_DefaultInterruptHandler(void){
-
-
 }

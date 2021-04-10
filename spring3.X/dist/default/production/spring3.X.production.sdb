@@ -3,23 +3,21 @@
 [d edition pro ]
 [d chip 16F1717 ]
 [d frameptr 6 ]
-"93 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/adc.c
+"88 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\mcc_generated_files/adc.c
 [e E5578 . `uc
 channel_AN0 0
 channel_AN1 1
 channel_AN2 2
-channel_AN3 3
 channel_DAC2_Output 28
 channel_Temp 29
 channel_DAC1_Output 30
 channel_FVRBuffer1 31
 ]
-"74 C:\Users\Carlos\Documents\spring3\spring3.X\main.c
+"76 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\main.c
 [e E5593 . `uc
 channel_AN0 0
 channel_AN1 1
 channel_AN2 2
-channel_AN3 3
 channel_DAC2_Output 28
 channel_Temp 29
 channel_DAC1_Output 30
@@ -29,31 +27,25 @@ channel_FVRBuffer1 31
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"49 C:\Users\Carlos\Documents\spring3\spring3.X\main.c
+"49 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"67 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/adc.c
+"67 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
-"120
+"115
 [v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
-"148
-[v _ADC_ISR ADC_ISR `(v  1 e 1 0 ]
-"159
-[v _ADC_SetInterruptHandler ADC_SetInterruptHandler `(v  1 e 1 0 ]
-"163
-[v _ADC_DefaultInterruptHandler ADC_DefaultInterruptHandler `(v  1 e 1 0 ]
-"52 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"50 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/mcc.c
+"50 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "59
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "69
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-"55 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 "131
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
-[s S259 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S178 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -63,25 +55,13 @@ channel_FVRBuffer1 31
 `uc 1 GIE 1 0 :1:7 
 ]
 "374 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h
-[s S268 . 1 `uc 1 . 1 0 :2:0 
+[s S187 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S273 . 1 `S259 1 . 1 0 `S268 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES273  1 e 1 @11 ]
-[s S109 . 1 `uc 1 TMR1IF 1 0 :1:0 
-`uc 1 TMR2IF 1 0 :1:1 
-`uc 1 CCP1IF 1 0 :1:2 
-`uc 1 SSP1IF 1 0 :1:3 
-`uc 1 TXIF 1 0 :1:4 
-`uc 1 RCIF 1 0 :1:5 
-`uc 1 ADIF 1 0 :1:6 
-`uc 1 TMR1GIF 1 0 :1:7 
-]
-"732
-[u S118 . 1 `S109 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES118  1 e 1 @17 ]
+[u S192 . 1 `S178 1 . 1 0 `S187 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES192  1 e 1 @11 ]
 "1210
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1272
@@ -92,19 +72,7 @@ channel_FVRBuffer1 31
 [v _TRISD TRISD `VEuc  1 e 1 @143 ]
 "1458
 [v _TRISE TRISE `VEuc  1 e 1 @144 ]
-[s S28 . 1 `uc 1 TMR1IE 1 0 :1:0 
-`uc 1 TMR2IE 1 0 :1:1 
-`uc 1 CCP1IE 1 0 :1:2 
-`uc 1 SSP1IE 1 0 :1:3 
-`uc 1 TXIE 1 0 :1:4 
-`uc 1 RCIE 1 0 :1:5 
-`uc 1 ADIE 1 0 :1:6 
-`uc 1 TMR1GIE 1 0 :1:7 
-]
-"1513
-[u S37 . 1 `S28 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES37  1 e 1 @145 ]
-[s S212 . 1 `uc 1 PS 1 0 :3:0 
+[s S131 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 TMR0SE 1 0 :1:4 
 `uc 1 TMR0CS 1 0 :1:5 
@@ -112,15 +80,15 @@ channel_FVRBuffer1 31
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1694
-[s S219 . 1 `uc 1 PS0 1 0 :1:0 
+[s S138 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S226 . 1 `S212 1 . 1 0 `S219 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES226  1 e 1 @149 ]
+[u S145 . 1 `S131 1 . 1 0 `S138 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES145  1 e 1 @149 ]
 "1811
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1870
@@ -133,12 +101,12 @@ channel_FVRBuffer1 31
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "2109
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S68 . 1 `uc 1 ADON 1 0 :1:0 
+[s S36 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
 "2134
-[s S72 . 1 `uc 1 . 1 0 :1:0 
+[s S40 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -146,11 +114,11 @@ channel_FVRBuffer1 31
 `uc 1 CHS3 1 0 :1:5 
 `uc 1 CHS4 1 0 :1:6 
 ]
-[s S80 . 1 `uc 1 . 1 0 :1:0 
+[s S48 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S83 . 1 `S68 1 . 1 0 `S72 1 . 1 0 `S80 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES83  1 e 1 @157 ]
+[u S51 . 1 `S36 1 . 1 0 `S40 1 . 1 0 `S48 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES51  1 e 1 @157 ]
 "2189
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2242
@@ -159,7 +127,7 @@ channel_FVRBuffer1 31
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2352
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S337 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S280 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -169,8 +137,8 @@ channel_FVRBuffer1 31
 `uc 1 LATB7 1 0 :1:7 
 ]
 "2369
-[u S346 . 1 `S337 1 . 1 0 ]
-[v _LATBbits LATBbits `VES346  1 e 1 @269 ]
+[u S289 . 1 `S280 1 . 1 0 ]
+[v _LATBbits LATBbits `VES289  1 e 1 @269 ]
 "2414
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "2476
@@ -229,16 +197,18 @@ channel_FVRBuffer1 31
 [v _INLVLD INLVLD `VEuc  1 e 1 @911 ]
 "8071
 [v _INLVLE INLVLE `VEuc  1 e 1 @912 ]
-"61 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/adc.c
-[v _ADC_InterruptHandler ADC_InterruptHandler `*.37(v  1 e 2 0 ]
-"49 C:\Users\Carlos\Documents\spring3\spring3.X\main.c
+"49 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
+"65
+[v main@resultado3 resultado3 `us  1 a 2 8 ]
+"64
+[v main@resultado2 resultado2 `us  1 a 2 6 ]
 "63
-[v main@resultado resultado `us  1 a 2 4 ]
-"85
+[v main@resultado1 resultado1 `us  1 a 2 4 ]
+"103
 } 0
-"50 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/mcc.c
+"50 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "57
@@ -248,53 +218,37 @@ channel_FVRBuffer1 31
 {
 "73
 } 0
-"55 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "129
 } 0
-"59 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/mcc.c
+"59 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "67
 } 0
-"67 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/adc.c
+"67 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 {
-"91
+"86
 } 0
-"159
-[v _ADC_SetInterruptHandler ADC_SetInterruptHandler `(v  1 e 1 0 ]
-{
-[v ADC_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"161
-} 0
-"120
+"115
 [v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
 {
 [v ADC_GetConversion@channel channel `E5578  1 a 1 wreg ]
 [v ADC_GetConversion@channel channel `E5578  1 a 1 wreg ]
-"123
+"118
 [v ADC_GetConversion@channel channel `E5578  1 a 1 3 ]
-"141
+"136
 } 0
-"52 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"74
+"63
 } 0
-"131 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/pin_manager.c
+"131 C:\Users\Carlos\Documents\PG7232_Sprint3_Grupo3\spring3.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
 "133
-} 0
-"148 C:\Users\Carlos\Documents\spring3\spring3.X\mcc_generated_files/adc.c
-[v _ADC_ISR ADC_ISR `(v  1 e 1 0 ]
-{
-"157
-} 0
-"163
-[v _ADC_DefaultInterruptHandler ADC_DefaultInterruptHandler `(v  1 e 1 0 ]
-{
-"166
 } 0

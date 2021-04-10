@@ -16,34 +16,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "374
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"230 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 230: void PIN_MANAGER_IOC(void);
+"210 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 210: void PIN_MANAGER_IOC(void);
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 0 ef ]
-"1502 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h: 1502:     struct {
-[s S79 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S79 . TMR1IE TMR2IE CCP1IE SSP1IE TXIE RCIE ADIE TMR1GIE ]
-"1501
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h: 1501: typedef union {
-[u S78 `S79 1 ]
-[n S78 . . ]
-"1513
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h: 1513: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x091)));
-[v _PIE1bits `VS78 ~T0 @X0 0 e@145 ]
-"721
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h: 721:     struct {
-[s S44 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S44 . TMR1IF TMR2IF CCP1IF SSP1IF TXIF RCIF ADIF TMR1GIF ]
-"720
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h: 720: typedef union {
-[u S43 `S44 1 ]
-[n S43 . . ]
-"732
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h: 732: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
-[v _PIR1bits `VS43 ~T0 @X0 0 e@17 ]
-"336 mcc_generated_files/adc.h
-[; ;mcc_generated_files/adc.h: 336: void ADC_ISR(void);
-[v _ADC_ISR `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -997,51 +972,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 785  ]
 "59
-[; ;mcc_generated_files/interrupt_manager.c: 59:     else if(INTCONbits.PEIE == 1)
+[; ;mcc_generated_files/interrupt_manager.c: 59:     else
 [e :U 784 ]
-[e $ ! == -> . . _INTCONbits 0 6 `i -> 1 `i 786  ]
 "60
 [; ;mcc_generated_files/interrupt_manager.c: 60:     {
 {
-"61
-[; ;mcc_generated_files/interrupt_manager.c: 61:         if(PIE1bits.ADIE == 1 && PIR1bits.ADIF == 1)
-[e $ ! && == -> . . _PIE1bits 0 6 `i -> 1 `i == -> . . _PIR1bits 0 6 `i -> 1 `i 787  ]
 "62
-[; ;mcc_generated_files/interrupt_manager.c: 62:         {
-{
-"63
-[; ;mcc_generated_files/interrupt_manager.c: 63:             ADC_ISR();
-[e ( _ADC_ISR ..  ]
-"64
-[; ;mcc_generated_files/interrupt_manager.c: 64:         }
+[; ;mcc_generated_files/interrupt_manager.c: 62:     }
 }
-[e $U 788  ]
-"65
-[; ;mcc_generated_files/interrupt_manager.c: 65:         else
-[e :U 787 ]
-"66
-[; ;mcc_generated_files/interrupt_manager.c: 66:         {
-{
-"68
-[; ;mcc_generated_files/interrupt_manager.c: 68:         }
-}
-[e :U 788 ]
-"69
-[; ;mcc_generated_files/interrupt_manager.c: 69:     }
-}
-[e $U 789  ]
-"70
-[; ;mcc_generated_files/interrupt_manager.c: 70:     else
-[e :U 786 ]
-"71
-[; ;mcc_generated_files/interrupt_manager.c: 71:     {
-{
-"73
-[; ;mcc_generated_files/interrupt_manager.c: 73:     }
-}
-[e :U 789 ]
 [e :U 785 ]
-"74
-[; ;mcc_generated_files/interrupt_manager.c: 74: }
+"63
+[; ;mcc_generated_files/interrupt_manager.c: 63: }
 [e :UE 783 ]
 }
