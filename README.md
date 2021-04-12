@@ -34,8 +34,6 @@ Para el proyecto desarrollado se requirió del uso del 18.9% del espacio de la m
 <img src="https://github.com/annacafaro/PG7232_Sprint3_Grupo3/blob/main/images/memory_summary2.PNG" alt="drawing" width="400"/> 
 
 
-
-
 Haz click en la imagen para ver el video del funcionamiento del producto. 
 
 [![](https://github.com/annacafaro/PG7232_Sprint3_Grupo3/blob/main/images/Sprint%203%20Presentation.png)](https://youtu.be/tCnasQKqAL4)
