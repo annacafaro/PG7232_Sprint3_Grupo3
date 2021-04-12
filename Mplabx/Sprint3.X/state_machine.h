@@ -12,6 +12,8 @@
 extern "C" {
 #endif
 
+ void check_temperature(void);
+    
 /* Seccion de Neopixel */
 void show(void);
 void single_color_line(char color, int lineNumber);
