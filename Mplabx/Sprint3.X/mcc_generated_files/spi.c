@@ -88,7 +88,7 @@ bool SPI_Open(spi_modes_t spiUniqueConfiguration)
     }
     return false;
 }
-
+/*
 void SPI_Close(void)
 {
     SSP1CON1bits.SSPEN = 0;
@@ -142,3 +142,4 @@ uint8_t SPI_ReadByte(void)
 {
     return SSP1BUF;
 }
+ */

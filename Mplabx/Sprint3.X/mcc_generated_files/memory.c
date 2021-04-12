@@ -54,7 +54,7 @@
 /**
   Section: Flash Module APIs
 */
-
+/*
 uint16_t FLASH_ReadWord(uint16_t flashAddr)
 {
     uint8_t GIEBitValue = INTCONbits.GIE;   // Save interrupt enable
@@ -171,6 +171,7 @@ void FLASH_EraseBlock(uint16_t startAddr)
     PMCON1bits.WREN = 0;       // Disable writes
     INTCONbits.GIE = GIEBitValue;	// Restore interrupt enable
 }
+*/
 /**
  End of File
 */
