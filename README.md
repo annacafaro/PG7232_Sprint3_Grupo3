@@ -27,7 +27,9 @@ Para obtener mayor información sobre el funcionamiento del producto, los compon
 
 ## Simulación 
 
+Haz click en la imagen para ver el video del funcionamiento del producto. 
 
+[![](png)](youtube)
 
 
 ## Contributors
