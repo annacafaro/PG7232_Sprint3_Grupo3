@@ -1,7 +1,7 @@
-Mplab/Sprint3.X/build/
-Mplab/Sprint3.X/dist/
-Mplab/Sprint3.X/nbproject/Makefile-*
-Mplab/Sprint3.X/nbproject/Package-*
-Mplab/Sprint3.X/nbproject/private/
+Mplabx/Sprint3.X/build/
+Mplabx/Sprint3.X/dist/
+Mplabx/Sprint3.X/nbproject/Makefile-*
+Mplabx/Sprint3.X/nbproject/Package-*
+Mplabx/Sprint3.X/nbproject/private/
 Proteus/*.pdsbak
 Proteus/*.workspace
