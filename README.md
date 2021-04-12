@@ -1,6 +1,6 @@
 # PG7232_Sprint3_Grupo3
 
-El objetivo de este proyecto es desarrollar un producto de iluminación LED para encuentros sociales y fiestas, basado en distintas modalidades de control:
+El objetivo de este proyecto es desarrollar un producto de iluminación LED para encuentros sociales y fiestas, llamado Lighting Dancer, que se basa en distintas modalidades de control:
 * Color fijo
 * Cambio de color lento
 * Cambio de color rápido
