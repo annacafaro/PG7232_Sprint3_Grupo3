@@ -157,7 +157,7 @@ void clear_pixels(void){
 /* Seccion Maquina de Estados */
 unsigned char numEstados = 0x08;
 unsigned char current_state = 0x00;
-uint16_t Buf[ERASE_FLASH_BLOCKSIZE];
+//uint16_t Buf[ERASE_FLASH_BLOCKSIZE];
 int interrupt_flag = 0;
 
 void CustomInterruptHandler(void){
@@ -264,7 +264,7 @@ void state_machine_init(void){
     IOCCF0_SetInterruptHandler(CustomInterruptHandler);
     // Clear all the pixels
     clear_pixels();
-    current_state = FLASH_ReadWord(0x1F90) & 0x07;
+    //current_state = FLASH_ReadWord(0x1F90) & 0x07;
 }
 
 void run_lights(void){
@@ -301,5 +301,6 @@ void run_lights(void){
 
 void state_machine(void){
     PORTD = current_state;
+    //FLASH_WriteWord(0x1F90, Buf, current_state);
     run_lights();
 }
